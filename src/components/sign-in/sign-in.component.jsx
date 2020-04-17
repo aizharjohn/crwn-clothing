@@ -33,6 +33,8 @@ class SignIn extends Component {
   };
 
   render() {
+    const { email, password } = this.state;
+
     return (
       <div className="sign-in">
         <h2>I already have an account</h2>
@@ -42,17 +44,19 @@ class SignIn extends Component {
           <FormInput
             name="email"
             type="email"
-            value={this.state.email}
-            handleChange={this.handleChange}
+            value={email}
+            onChange={this.handleChange}
             label="Email"
+            required
           />
 
           <FormInput
             name="password"
             type="password"
-            value={this.state.password}
-            handleChange={this.handleChange}
+            value={password}
+            onChange={this.handleChange}
             label="Password"
+            required
           />
 
           <div className="buttons">
